@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int original = n;
+        int sum=0;
+        if(n>99 && n<1000){
+            while(n>0){
+                int rem=n%10;
+                int cube=rem*rem*rem;
+                sum+=cube;
+                n/=10;
+            }
+        }
+        if(original==sum){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+    }
+}
